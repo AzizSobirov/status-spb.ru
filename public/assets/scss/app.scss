@@ -1,0 +1,19 @@
+@import "base/mixins";
+@include font-face("Montserrat", 300);
+@include font-face("Montserrat", 400);
+@include font-face("SeoulHangang", 300);
+
+:root {
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "SeoulHangang", sans-serif;
+  --text-color: #fff;
+  --primary: #d9a04c;
+  --gray: #d9d9d9;
+  --hover-color: #d39435;
+  --transition: all 0.25s ease;
+}
+
+@import "base/normalize";
+@import "starter-kit/index";
+@import "components/index";
+@import "index";

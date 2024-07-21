@@ -1,0 +1,13 @@
+---
+interface Props {
+  src?: string;
+  alt?: string;
+}
+
+const { src, alt = "", ...rest } = Astro.props;
+const url = `/assets/img/icons/${src}`;
+---
+
+<div class="icon" {...rest}>
+  {src ? <img src={url} alt={alt} /> : <slot />}
+</div>

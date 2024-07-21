@@ -1,0 +1,29 @@
+---
+import { H2 } from "starter-kit";
+---
+
+<div class="popup popup--form">
+  <div class="popup__bg" onclick="closePopup('form')"></div>
+  <div class="popup__content">
+    <div class="popup__close" onclick="closePopup('form')">
+      <svg
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M1 1L23.5 23.5" stroke="currentColor" stroke-width="2"></path>
+        <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <div class="popup__form" id="form-content">
+      <H2>Оставьте заявку</H2>
+      <div class="text-sm">Мы свяжемся с Вами в ближайшее время</div>
+    </div>
+    <div class="popup__success" id="form-success">
+      <H2>Заявка принята</H2>
+      <div class="text-sm">Спасибо что Вы с нами!</div>
+    </div>
+  </div>
+</div>

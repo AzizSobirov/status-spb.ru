@@ -1,0 +1,19 @@
+.btn {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition);
+  @include flex-row;
+
+  &--primary {
+    width: 200px;
+    height: 36px;
+    color: #141414;
+    background: var(--primary);
+
+    &:hover {
+      background: var(--hover-color);
+    }
+  }
+}

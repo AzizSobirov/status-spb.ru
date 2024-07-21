@@ -1,0 +1,43 @@
+---
+import { TheHeader, TheFooter, ThePopup } from "components";
+import "../../public/assets/scss/app.scss";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const timestamp = Date.now();
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="The Site uses Aziz Sobirov's Starter Kit"
+    />
+    <meta name="author" content="Aziz Sobirov" />
+    <meta name="theme-color" content="#100C09" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <!-- Header -->
+    <TheHeader />
+    <slot name="header" />
+    <!-- Main -->
+    <slot />
+    <!-- Footer -->
+    <TheFooter />
+    <!-- Popup -->
+    <ThePopup />
+    <slot name="footer" />
+    <!-- Scripts -->
+    <script src=`/assets/js/app.js?v=${timestamp}` is:inline></script>
+    <slot name="scripts" />
+  </body>
+</html>

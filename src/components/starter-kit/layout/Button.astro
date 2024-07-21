@@ -1,0 +1,74 @@
+---
+interface Props {
+  variant?: string;
+  type?: string;
+  label?: string;
+  action?: string;
+  onclick?: string;
+  to?: string;
+  id?: string;
+}
+
+const {
+  to,
+  label,
+  variant = "primary",
+  action = "form",
+  type = "button",
+  onclick,
+  ...rest
+} = Astro.props;
+
+const props: { [key: string]: string } = { ...rest };
+
+if (action == "form" && type != "link" && type != "submit") {
+  props.onclick = `openPopup('${action}')`;
+} else if (action != "false" && type != "link" && type != "submit") {
+  props.onclick = action;
+}
+
+if (type && type == "submit") {
+  props.type = "submit";
+}
+
+if (type == "link" && to) {
+  props.href = to;
+}
+
+let Tag = "button";
+if (type == "link") {
+  Tag = "a";
+} else if (type == "div") {
+  Tag = "div";
+} else if (type == "submit") {
+  Tag = "button";
+} else {
+  Tag = "button";
+}
+---
+
+<Tag class:list={"btn btn--" + variant} {...props} set:text={label}>
+  {
+    variant == "primary" ? (
+      <slot />
+    ) : variant == "details" ? (
+      <>
+        Подробнее
+        <svg
+          width="31"
+          height="8"
+          viewBox="0 0 31 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M30.1036 4.35355C30.2988 4.15829 30.2988 3.84171 30.1036 3.64645L26.9216 0.464466C26.7263 0.269204 26.4097 0.269204 26.2145 0.464466C26.0192 0.659728 26.0192 0.976311 26.2145 1.17157L29.0429 4L26.2145 6.82843C26.0192 7.02369 26.0192 7.34027 26.2145 7.53553C26.4097 7.7308 26.7263 7.7308 26.9216 7.53553L30.1036 4.35355ZM0.25 4.5H29.75V3.5H0.25V4.5Z"
+            fill="white"
+          />
+        </svg>
+      </>
+    ) : (
+      <slot />
+    )
+  }
+</Tag>

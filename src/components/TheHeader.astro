@@ -1,0 +1,30 @@
+---
+import { Img, WpNav, Button } from "starter-kit";
+
+const menu = [
+  { name: "Главная", href: "/" },
+  { name: "О клубе", href: "/about" },
+  { name: "Стоимость", href: "/pricing" },
+  { name: "Акции", href: "/offers" },
+  { name: "Контакты", href: "/contacts" },
+];
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header__logo">
+      <Img src="logo.svg" only />
+    </div>
+    <WpNav list={menu} />
+    <Button>Забронировать стол</Button>
+
+    <div class="header__socials">
+      <a class="icon" href="#"><Img src="icons/telegram.svg" only /></a>
+      <a class="icon" href="#"><Img src="icons/whatsapp.svg" only /></a>
+    </div>
+
+    <a class="header__contact" href="tel:89888888888">
+      8 988 <span class="text-primary">888 88 88</span>
+    </a>
+  </div>
+</header>

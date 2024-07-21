@@ -1,0 +1,33 @@
+---
+import App from "../layouts/App.astro";
+import { Section, H1, H2, Block } from "starter-kit";
+import { TheIntro } from "components";
+---
+
+<App title="Бильярдный Клуб">
+  <Fragment slot="header">
+    <style is:inline>
+      .header {
+        padding: 50px 0;
+      }
+
+      .header .container {
+        align-items: flex-start;
+      }
+
+      .header__logo {
+        display: none;
+      }
+
+      .header .menu {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    </style>
+  </Fragment>
+  <main>
+    <!-- Intro -->
+    <TheIntro />
+  </main>
+</App>
