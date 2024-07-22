@@ -1,0 +1,64 @@
+---
+import { Section, H2, Img } from "starter-kit";
+---
+
+<Section name="gallery">
+  <H2>Фото нашего клуба</H2>
+  <div class="gallery__list">
+    <Img
+      src="gallery/1.png"
+      only
+      data-fancybox="gallery"
+      data-src="/assets/img/gallery/1.png"
+    />
+    <Img
+      src="gallery/2.png"
+      only
+      data-fancybox="gallery"
+      data-src="/assets/img/gallery/2.png"
+    />
+    <Img
+      src="gallery/3.png"
+      only
+      data-fancybox="gallery"
+      data-src="/assets/img/gallery/3.png"
+    />
+    <Img
+      src="gallery/4.png"
+      only
+      data-fancybox="gallery"
+      data-src="/assets/img/gallery/4.png"
+    />
+  </div>
+  <div class="gallery__swiper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <Img
+          class="swiper-slide"
+          src="gallery/1.png"
+          data-fancybox="gallery"
+          data-src="/assets/img/gallery/1.png"
+        />
+        <Img
+          class="swiper-slide"
+          src="gallery/2.png"
+          data-fancybox="gallery"
+          data-src="/assets/img/gallery/2.png"
+        />
+        <Img
+          class="swiper-slide"
+          src="gallery/3.png"
+          data-fancybox="gallery"
+          data-src="/assets/img/gallery/3.png"
+        />
+        <Img
+          class="swiper-slide"
+          src="gallery/4.png"
+          data-fancybox="gallery"
+          data-src="/assets/img/gallery/4.png"
+        />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</Section>

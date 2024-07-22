@@ -1,3 +1,29 @@
+---
+import { Img, WpNav } from "starter-kit";
+
+const menu = [
+  { name: "Главная", href: "/" },
+  { name: "О клубе", href: "/about" },
+  { name: "Стоимость", href: "/pricing" },
+  { name: "Акции", href: "/offers" },
+  { name: "Контакты", href: "/contacts" },
+];
+---
+
 <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer__content">
+      <a href="/" class="footer__logo">
+        <Img src="logo.svg" only />
+      </a>
+      <WpNav list={menu} />
+      <a href="#" class="footer__by">
+        Разработка и продвижение
+        <Img src="top-project.svg" only />
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© status-spb.ru 2024</div>
+    </div>
+  </div>
 </footer>

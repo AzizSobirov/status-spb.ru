@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "images/*": ["./public/assets/img/*"],
       "store": ["./index.store.ts"],
       "starter-kit": ["src/components/starter-kit/imports.d.ts"],
       "components": ["./imports.d.ts"]

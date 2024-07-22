@@ -1,5 +1,6 @@
 ---
 import { TheHeader, TheFooter, ThePopup } from "components";
+import { Button } from "starter-kit";
 import "../../public/assets/scss/app.scss";
 
 interface Props {
@@ -22,6 +23,8 @@ const timestamp = Date.now();
     <meta name="author" content="Aziz Sobirov" />
     <meta name="theme-color" content="#100C09" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css" />
+    <link rel="stylesheet" href="/assets/css/swiper.min.css" />
     <title>{title}</title>
     <slot name="head" />
   </head>
@@ -35,8 +38,24 @@ const timestamp = Date.now();
     <TheFooter />
     <!-- Popup -->
     <ThePopup />
+    <!-- Need consultation -->
+    <div class="toast">
+      <div class="toast__close" onclick="closeToast()">
+        <img src="/assets/img/icons/close.svg" alt="" />
+      </div>
+      <div class="col">
+        <div class="font-regular">Нужна консультация?</div>
+        <hr />
+        <p class="text-sm">
+          Оставьте заявку и наш менеджер <br /> позвонит Вам для уточнения деталей
+        </p>
+      </div>
+      <Button variant="black">Оставить заявку</Button>
+    </div>
     <slot name="footer" />
     <!-- Scripts -->
+    <script src="/assets/js/swiper.min.js" is:inline></script>
+    <script src="/assets/js/fancybox.min.js" is:inline></script>
     <script src=`/assets/js/app.js?v=${timestamp}` is:inline></script>
     <slot name="scripts" />
   </body>

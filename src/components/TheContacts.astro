@@ -1,0 +1,34 @@
+---
+import { Section, H2, Img, Button } from "starter-kit";
+---
+
+<Section name="contacts">
+  <H2>Контакты</H2>
+  <div class="contacts__list">
+    <div class="row">
+      <div class="text-primary">Наш адрес:</div>
+      <p>г. Санкт-Петербург, пр. Славы , д. 52, к. 1 <br /> (3 парадная)</p>
+    </div>
+    <div class="row">
+      <div class="text-primary">Телефон для бронирования:</div>
+      <a href="tel:+79112703355">+7 (911) 270-33-55</a>
+    </div>
+    <div class="row">
+      <Button>Оставить заявку</Button>
+      <div class="row">
+        <a class="icon" href="#"><Img src="icons/telegram.svg" only /></a>
+        <a class="icon" href="#"><Img src="icons/whatsapp.svg" only /></a>
+      </div>
+    </div>
+  </div>
+  <Fragment slot="footer">
+    <iframe
+      class="contacts__map"
+      src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.409906%2C59.864060&mode=whatshere&whatshere%5Bpoint%5D=30.407847%2C59.864060&whatshere%5Bzoom%5D=17&z=17;scroll=false"
+      width="560"
+      height="400"
+      frameborder="1"
+      allowfullscreen="true"
+      style="position:relative;"></iframe>
+  </Fragment>
+</Section>

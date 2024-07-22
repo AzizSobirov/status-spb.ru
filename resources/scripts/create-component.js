@@ -22,7 +22,7 @@ const componentPath = path.join(__dirname, '../../', 'src', 'components', compon
 
 // Component template content
 const componentContent = `---
-import {Section, H2} from "starter-kit";
+import { Section, H2, Img } from "starter-kit";
 ---
 
 <Section name="${componentName.toLowerCase()}">

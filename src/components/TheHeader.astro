@@ -15,6 +15,7 @@ const menu = [
     <div class="header__logo">
       <Img src="logo.svg" only />
     </div>
+
     <WpNav list={menu} />
     <Button>Забронировать стол</Button>
 
@@ -28,3 +29,19 @@ const menu = [
     </a>
   </div>
 </header>
+
+<div class="mobile__nav">
+  <WpNav list={menu} />
+  <div class="mobile__nav-tabs">
+    <div class="mobile__nav-menu">
+      <span class="text-xs">МЕНЮ</span>
+      <Img src="icons/close.svg" only />
+    </div>
+    <div class="mobile__nav-content">
+      <a class="icon" href="#"><Img src="icons/call.svg" only /></a>
+      <a class="icon" href="#"><Img src="icons/telegram.svg" only /></a>
+      <a class="icon" href="#"><Img src="icons/whatsapp.svg" only /></a>
+      <Button variant="black">Оставить заявку</Button>
+    </div>
+  </div>
+</div>
