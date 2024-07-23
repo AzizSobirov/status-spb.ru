@@ -1,5 +1,5 @@
 ---
-import { H2 } from "starter-kit";
+import { H2, Img } from "starter-kit";
 ---
 
 <div class="popup popup--form">
@@ -17,13 +17,96 @@ import { H2 } from "starter-kit";
         <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
       </svg>
     </div>
-    <div class="popup__form" id="form-content">
-      <H2>Оставьте заявку</H2>
-      <div class="text-sm">Мы свяжемся с Вами в ближайшее время</div>
+    <Img class="img" src="logo.svg" only />
+    <div class="popup__form" id="form-book">
+      <H2>Забронировать стол</H2>
+      <form>
+        <input
+          type="text"
+          name="name"
+          placeholder="Ваше имя"
+          minlength="3"
+          required
+        />
+        <input
+          type="text"
+          class="v-mask"
+          name="phone"
+          placeholder="Ваш телефон"
+          required
+        />
+
+        <input type="date" name="date" placeholder="Выберите дату" required />
+        <div class="row">
+          <input
+            type="time"
+            name="start-time"
+            placeholder="Время начала"
+            required
+          />
+          <input
+            type="time"
+            name="end-time"
+            placeholder="Время конца"
+            required
+          />
+        </div>
+        <textarea
+          name="message"
+          placeholder="Здесь вы можете указать количество столов для брони, номер стола, за которым вы хотите играть или другой комментарий"
+        ></textarea>
+        <button type="submit" class="btn btn--primary"
+          >Забронировать стол</button
+        >
+        <div class="text-xs">
+          Возможность онлайн бронирования возможно только на <br /> следующий от
+          заявки день.
+          <br /><br />
+          Отправляя заявку я даю <span class="text-primary"
+            >согласие на обработку персональных данных</span
+          > и <span class="text-primary">согласие с правилами клуба</span>
+        </div>
+      </form>
+    </div>
+    <div class="popup__form" id="form-application">
+      <H2>Оставить заявку</H2>
+      <p>
+        Оставьте заявку и наш менеджер свяжется с Вами, <br /> и ответит на интересующие
+        вопросы.
+      </p>
+      <form>
+        <input
+          type="text"
+          name="name"
+          placeholder="Ваше имя"
+          minlength="3"
+          required
+        />
+        <input
+          type="text"
+          class="v-mask"
+          name="phone"
+          placeholder="Ваш телефон"
+          required
+        />
+        <textarea name="message" placeholder="Комментарий"></textarea>
+        <button type="submit" class="btn btn--primary">Отправить</button>
+        <div class="text-xs">
+          Возможность онлайн бронирования возможно только на <br /> следующий от
+          заявки день.
+          <br /><br />
+          Отправляя заявку я даю <span class="text-primary"
+            >согласие на обработку персональных данных</span
+          > и <span class="text-primary">согласие с правилами клуба</span>
+        </div>
+      </form>
     </div>
     <div class="popup__success" id="form-success">
-      <H2>Заявка принята</H2>
-      <div class="text-sm">Спасибо что Вы с нами!</div>
+      <H2>Спасибо за Вашу заявку!</H2>
+      <div class="text-sm">
+        Наш менеджер вскоре свяжется с Вами, <br /> и ответит на интересующие вопросы.
+      </div>
+      <a href="/" class="btn btn--primary">На главную</a>
     </div>
   </div>
 </div>

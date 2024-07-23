@@ -41,7 +41,9 @@ import { TheGallery, TheVip, TheContacts } from "components";
           отдыха. Мы ждем Вас, чтобы подарить незабываемые впечатления от игры и
           общения.
         </p>
-        <Button>Забронировать стол</Button>
+        <button onclick="openPopup('form',true)" class="btn btn--primary">
+          Забронировать стол
+        </button>
       </div>
       <Fragment slot="footer">
         <Img class="about__img" src="about-img.png" only />

@@ -17,7 +17,7 @@
     height: 100%;
     width: 100%;
     backdrop-filter: blur(10px);
-    background: rgba(218, 245, 241, 0.5);
+    background: #11111140;
   }
 
   &__close {
@@ -30,11 +30,128 @@
 
   &__content {
     position: relative;
+    padding: 60px;
+    background: #141414;
     transform: scale(0.85);
     transition: 0.35s cubic-bezier(0.83, 0, 0.17, 1);
     border-radius: 20px;
     opacity: 0.6;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    @include media("xl") {
+      width: 100%;
+      max-width: calc(100% - 40px);
+    }
+    @include media("lg") {
+      padding: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-height: calc(100vh - 80px);
+      width: auto;
+    }
+    @include media("sm") {
+      padding: 20px;
+      max-width: calc(100% - 20px);
+      border-radius: 12px;
+      overflow: auto;
+    }
+  }
+
+  .img {
+    width: 480px;
+
+    @include media("lg") {
+      display: none;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 460px;
+    @include start(column, 25px);
+
+    @include media("sm") {
+      gap: 20px;
+
+      .text-h2 {
+        font-size: 24px;
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 420px;
+    @include start(column, 20px);
+
+    input,
+    textarea {
+      padding: 15px;
+      width: 100%;
+      color: #fff;
+      font-size: 16px;
+      border: 1px solid #a7a7a7;
+      color-scheme: dark;
+    }
+
+    .row {
+      gap: 20px;
+    }
+
+    textarea {
+      height: 90px;
+      resize: none;
+    }
+
+    @include media("3xl") {
+      gap: 15px;
+
+      input,
+      textarea {
+        padding: 12px;
+      }
+    }
+    @include media("sm") {
+      gap: 10px;
+
+      input,
+      textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      button {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__success {
+    @include start(column, 30px);
+  }
+
+  #submit-application {
+    textarea {
+      height: 140px;
+    }
+
+    button {
+      margin: 20px 0 10px;
+    }
+  }
+
+  #form-success,
+  #form-book {
+    display: none;
   }
 }
 
