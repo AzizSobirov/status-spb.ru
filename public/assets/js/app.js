@@ -4,6 +4,21 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("header-sticky", window.scrollY > 0);
 });
 
+const menu = document.querySelector(".mobile__nav .menu");
+function toggleMenu() {
+  if (!menu.classList.contains('active')) {
+    menu.style.display = 'flex'
+    setTimeout(() => {
+      menu.classList.add('active')
+    }, 50)
+  } else {
+    menu.classList.remove('active')
+    setTimeout(() => {
+      menu.style.display = 'none'
+    }, 250)
+  }
+}
+
 
 //** Toast **/
 window.addEventListener('DOMContentLoaded', () => {

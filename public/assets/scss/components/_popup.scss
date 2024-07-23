@@ -70,7 +70,7 @@
     background: #000;
   }
 
-  @include media("sm") {
+  @include media("lg") {
     display: none !important;
   }
 }

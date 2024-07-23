@@ -1,8 +1,22 @@
 ---
 import { Section, H2, Img, Button } from "starter-kit";
+
+interface Props {
+  main?: boolean;
+}
+
+const { main = false } = Astro.props;
 ---
 
 <Section name="contacts">
+  {
+    main && (
+      <div class="contacts__top">
+        <Img class="img" src="contacts-img.png" only />
+        <Img class="ball" src="ball.png" only />
+      </div>
+    )
+  }
   <H2>Контакты</H2>
   <div class="contacts__list">
     <div class="row">

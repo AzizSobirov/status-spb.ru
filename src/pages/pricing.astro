@@ -1,0 +1,57 @@
+---
+import App from "../layouts/App.astro";
+import { Section, H1, H2, Button, Img } from "starter-kit";
+import { TheContacts } from "components";
+---
+
+<App title="Бильярдный Клуб">
+  <main>
+    <!-- ThePricing -->
+    <Section name="pricing">
+      <H2>Стоимость VIP бильярда</H2>
+      <p class="pricing__desc">
+        Бильярдный клуб «Статус» предлагает вам уникальную возможность
+        насладиться игрой на элитных столах для русского бильярда. В нашем клубе
+        всего три стола, что обеспечивает комфортную и спокойную атмосферу для
+        истинных ценителей игры.
+        <br /><br />
+        Мы гордимся качеством наших столов и предоставляем вам лучшее оборудование
+        для игры. Независимо от вашего уровня мастерства, вы сможете насладиться
+        игрой в приятной и уютной обстановке.
+      </p>
+
+      <div class="pricing__table">
+        <table>
+          <tr>
+            <th></th>
+            <th>11:00 - 18:00</th>
+            <th>18:00 - 23:00</th>
+          </tr>
+          <tr>
+            <th>Понедельник - Пятница</th>
+            <td>1 500 руб</td>
+            <td>1 700 руб</td>
+          </tr>
+          <tr>
+            <th>Суббота - Воскресенье</th>
+            <td>1 700 руб</td>
+            <td>1 700 руб</td>
+          </tr>
+        </table>
+        <Button variant="black">Забронировать стол</Button>
+      </div>
+
+      <div class="pricing__balls">
+        <Img class="img-1" src="white-ball.png" only />
+        <Img class="img-2" src="white-ball.png" only />
+        <Img class="img-3" src="white-ball.png" only />
+      </div>
+
+      <div class="pricing__img">
+        <Img src="pricing-img.png" only />
+      </div>
+    </Section>
+    <!-- TheContacts -->
+    <TheContacts />
+  </main>
+</App>

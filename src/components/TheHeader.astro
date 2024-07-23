@@ -12,9 +12,9 @@ const menu = [
 
 <header class="header">
   <div class="container">
-    <div class="header__logo">
+    <a href="/" class="header__logo">
       <Img src="logo.svg" only />
-    </div>
+    </a>
 
     <WpNav list={menu} />
     <Button>Забронировать стол</Button>
@@ -33,7 +33,7 @@ const menu = [
 <div class="mobile__nav">
   <WpNav list={menu} />
   <div class="mobile__nav-tabs">
-    <div class="mobile__nav-menu">
+    <div class="mobile__nav-menu" onclick="toggleMenu()">
       <span class="text-xs">МЕНЮ</span>
       <Img src="icons/close.svg" only />
     </div>
