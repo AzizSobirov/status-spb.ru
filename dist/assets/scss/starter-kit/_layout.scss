@@ -1,0 +1,60 @@
+// ** container ** //
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+// ** Responsive ** //
+// @include media("1820px") {
+//   .container {
+//     padding: 0 20px;
+//     max-width: 1630px;
+//   }
+// }
+// @include media("3xl") {
+//   .container {
+//     max-width: 1440px;
+//   }
+// }
+// @include media("2xl") {
+//   .container {
+//     max-width: 1280px;
+//   }
+// }
+@include media("xl") {
+  .container {
+    max-width: 1024px;
+  }
+}
+@include media("lg") {
+  .container {
+    max-width: 768px;
+  }
+}
+@include media("md") {
+  .container {
+    max-width: 640px;
+  }
+}
+@include media("sm") {
+  .container {
+    padding: 0 15px;
+    max-width: 475px;
+  }
+}

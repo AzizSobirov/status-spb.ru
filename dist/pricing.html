@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="The Site uses Aziz Sobirov's Starter Kit">
+    <meta name="author" content="Aziz Sobirov">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper.min.css">
+    <title>Бильярдный Клуб</title>
+    
+  <link rel="stylesheet" href="/assets/css/app.By825Te2.css"></head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+  <div class="container">
+    <a href="/" class="header__logo">
+      <img src="/assets/img/logo.svg" alt="">
+    </a>
+
+    <ul class="menu">
+  <li class="menu-item">
+        <a href="/">Главная</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/about">О клубе</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/pricing">Стоимость</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/offers">Акции</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/contacts">Контакты</a>
+
+        
+      </li>
+</ul>
+    <button onclick="openPopup('form',true)" class="btn btn--primary">
+      Забронировать стол
+    </button>
+
+    <div class="header__socials">
+      <a class="icon" href="#"><img src="/assets/img/icons/telegram.svg" alt=""></a>
+      <a class="icon" href="#"><img src="/assets/img/icons/whatsapp.svg" alt=""></a>
+    </div>
+
+    <a class="header__contact" href="tel:89888888888">
+      8 988 <span class="text-primary">888 88 88</span>
+    </a>
+  </div>
+</header>
+
+<div class="mobile__nav">
+  <ul class="menu">
+  <li class="menu-item">
+        <a href="/">Главная</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/about">О клубе</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/pricing">Стоимость</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/offers">Акции</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/contacts">Контакты</a>
+
+        
+      </li>
+</ul>
+  <div class="mobile__nav-tabs">
+    <div class="mobile__nav-menu" onclick="toggleMenu()">
+      <span class="text-xs">МЕНЮ</span>
+      <img src="/assets/img/icons/close.svg" alt="">
+    </div>
+    <div class="mobile__nav-content">
+      <a class="icon" href="#"><img src="/assets/img/icons/call.svg" alt=""></a>
+      <a class="icon" href="#"><img src="/assets/img/icons/telegram.svg" alt=""></a>
+      <a class="icon" href="#"><img src="/assets/img/icons/whatsapp.svg" alt=""></a>
+      <button onclick="openPopup('form')" class="btn btn--black">Оставить заявку
+</button>
+    </div>
+  </div>
+</div>
+    
+    <!-- Main -->
+    
+  <main>
+    <!-- ThePricing -->
+    <section class="pricing">
+  
+        
+        <div class="container">
+          
+      <div class="text-h2">
+  Стоимость VIP бильярда
+</div>
+      <p class="pricing__desc">
+        Бильярдный клуб «Статус» предлагает вам уникальную возможность
+        насладиться игрой на элитных столах для русского бильярда. В нашем клубе
+        всего три стола, что обеспечивает комфортную и спокойную атмосферу для
+        истинных ценителей игры.
+        <br><br>
+        Мы гордимся качеством наших столов и предоставляем вам лучшее оборудование
+        для игры. Независимо от вашего уровня мастерства, вы сможете насладиться
+        игрой в приятной и уютной обстановке.
+      </p>
+
+      <div class="pricing__table">
+        <table>
+          <tr>
+            <th></th>
+            <th>11:00 - 18:00</th>
+            <th>18:00 - 23:00</th>
+          </tr>
+          <tr>
+            <th>Понедельник - Пятница</th>
+            <td>1 500 руб</td>
+            <td>1 700 руб</td>
+          </tr>
+          <tr>
+            <th>Суббота - Воскресенье</th>
+            <td>1 700 руб</td>
+            <td>1 700 руб</td>
+          </tr>
+        </table>
+        <button onclick="openPopup('form',true)" class="btn btn--black">
+          Забронировать стол
+        </button>
+      </div>
+
+      <div class="pricing__balls">
+        <img class="img-1" src="/assets/img/white-ball.png" alt="">
+        <img class="img-2" src="/assets/img/white-ball.png" alt="">
+        <img class="img-3" src="/assets/img/white-ball.png" alt="">
+      </div>
+
+      <div class="pricing__img">
+        <img src="/assets/img/pricing-img.png" alt="">
+      </div>
+    
+        </div>
+        
+      
+</section>
+    <!-- TheContacts -->
+    <section class="contacts">
+  
+        
+        <div class="container">
+          <div class="text-h2">
+  Контакты
+</div>
+  <div class="contacts__list">
+    <div class="row">
+      <div class="text-primary">Наш адрес:</div>
+      <p>г. Санкт-Петербург, пр. Славы , д. 52, к. 1 <br> (3 парадная)</p>
+    </div>
+    <div class="row">
+      <div class="text-primary">Телефон для бронирования:</div>
+      <a href="tel:+79112703355">+7 (911) 270-33-55</a>
+    </div>
+    <div class="row">
+      <button onclick="openPopup('form')" class="btn btn--primary">Оставить заявку
+</button>
+      <div class="row">
+        <a class="icon" href="#"><img src="/assets/img/icons/telegram.svg" alt=""></a>
+        <a class="icon" href="#"><img src="/assets/img/icons/whatsapp.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  
+
+        </div>
+        
+    <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.409906%2C59.864060&mode=whatshere&whatshere%5Bpoint%5D=30.407847%2C59.864060&whatshere%5Bzoom%5D=17&z=17;scroll=false" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+  
+      
+</section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <a href="/" class="footer__logo">
+        <img src="/assets/img/logo.svg" alt="">
+      </a>
+      <ul class="menu">
+  <li class="menu-item">
+        <a href="/">Главная</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/about">О клубе</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/pricing">Стоимость</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/offers">Акции</a>
+
+        
+      </li><li class="menu-item">
+        <a href="/contacts">Контакты</a>
+
+        
+      </li>
+</ul>
+      <a href="#" class="footer__by">
+        Разработка и продвижение
+        <img src="/assets/img/top-project.svg" alt="">
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© status-spb.ru 2024</div>
+    </div>
+  </div>
+</footer>
+    <!-- Popup -->
+    <div class="popup popup--form">
+  <div class="popup__bg" onclick="closePopup('form')"></div>
+  <div class="popup__content">
+    <div class="popup__close" onclick="closePopup('form')">
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L23.5 23.5" stroke="currentColor" stroke-width="2"></path>
+        <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <img class="img" src="/assets/img/logo.svg" alt="">
+    <div class="popup__form" id="form-book">
+      <div class="text-h2">
+  Забронировать стол
+</div>
+      <form>
+        <input type="text" name="name" placeholder="Ваше имя" minlength="3" required>
+        <input type="text" class="v-mask" name="phone" placeholder="Ваш телефон" required>
+
+        <input type="date" name="date" placeholder="Выберите дату" required>
+        <div class="row">
+          <input type="time" name="start-time" placeholder="Время начала" required>
+          <input type="time" name="end-time" placeholder="Время конца" required>
+        </div>
+        <textarea name="message" placeholder="Здесь вы можете указать количество столов для брони, номер стола, за которым вы хотите играть или другой комментарий"></textarea>
+        <button type="submit" class="btn btn--primary">Забронировать стол</button>
+        <div class="text-xs">
+          Возможность онлайн бронирования возможно только на <br> следующий от
+          заявки день.
+          <br><br>
+          Отправляя заявку я даю <span class="text-primary">согласие на обработку персональных данных</span> и <span class="text-primary">согласие с правилами клуба</span>
+        </div>
+      </form>
+    </div>
+    <div class="popup__form" id="form-application">
+      <div class="text-h2">
+  Оставить заявку
+</div>
+      <p>
+        Оставьте заявку и наш менеджер свяжется с Вами, <br> и ответит на интересующие
+        вопросы.
+      </p>
+      <form>
+        <input type="text" name="name" placeholder="Ваше имя" minlength="3" required>
+        <input type="text" class="v-mask" name="phone" placeholder="Ваш телефон" required>
+        <textarea name="message" placeholder="Комментарий"></textarea>
+        <button type="submit" class="btn btn--primary">Отправить</button>
+        <div class="text-xs">
+          Возможность онлайн бронирования возможно только на <br> следующий от
+          заявки день.
+          <br><br>
+          Отправляя заявку я даю <span class="text-primary">согласие на обработку персональных данных</span> и <span class="text-primary">согласие с правилами клуба</span>
+        </div>
+      </form>
+    </div>
+    <div class="popup__success" id="form-success">
+      <div class="text-h2">
+  Спасибо за Вашу заявку!
+</div>
+      <div class="text-sm">
+        Наш менеджер вскоре свяжется с Вами, <br> и ответит на интересующие вопросы.
+      </div>
+      <a href="/" class="btn btn--primary">На главную</a>
+    </div>
+  </div>
+</div>
+    <!-- Need consultation -->
+    <div class="toast">
+      <div class="toast__close" onclick="closeToast()">
+        <img src="/assets/img/icons/close.svg" alt="">
+      </div>
+      <div class="col">
+        <div class="font-regular">Нужна консультация?</div>
+        <hr>
+        <p class="text-sm">
+          Оставьте заявку и наш менеджер <br> позвонит Вам для уточнения деталей
+        </p>
+      </div>
+      <button onclick="openPopup('form')" class="btn btn--black">Оставить заявку
+</button>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/assets/js/swiper.min.js"></script>
+    <script src="/assets/js/fancybox.min.js"></script>
+    <script src="/assets/js/app.js?v=1721757726821"></script>
+    
+  </body></html>

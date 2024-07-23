@@ -1,0 +1,37 @@
+.btn {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: var(--transition);
+  @include flex-row;
+
+  &--primary {
+    width: 200px;
+    height: 36px;
+    color: #141414;
+    background: var(--primary);
+
+    &:hover {
+      background: var(--hover-color);
+    }
+  }
+
+  &--outline {
+    padding: 0 12px;
+    height: 44px;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+
+    &:hover {
+      color: #141414;
+      background: var(--primary);
+    }
+  }
+
+  &--black {
+    padding: 12px;
+    background: #141414;
+  }
+}
