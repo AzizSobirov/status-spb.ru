@@ -1,98 +1,112 @@
 // GSAP
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-if (ScrollTrigger.isTouch !== 1 && window.innerWidth > 1024) {
-  ScrollSmoother.create({
-    wrapper: '.wrapper',
-    content: '.content',
-    smooth: 1.5,
-    effects: true
-  })
+window.addEventListener('DOMContentLoaded', () => {
+  if (ScrollTrigger.isTouch !== 1 && window.innerWidth > 1024) {
+    ScrollSmoother.create({
+      wrapper: '.wrapper',
+      content: '.content',
+      smooth: 1.5,
+      effects: true
+    })
+
+    const firstSection = gsap.utils.toArray('[data-intro]')
+    firstSection.forEach(item => {
+      gsap.fromTo(item, { opacity: 1 }, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: 'center',
+          end: 'bottom',
+          scrub: true,
+        }
+      })
+    })
 
 
-  const firstSection = gsap.utils.toArray('[data-intro]')
-  firstSection.forEach(item => {
-    gsap.fromTo(item, { opacity: 1 }, {
-      opacity: 0,
+    const introLogo = document.querySelector('.intro__logo')
+    introLogo && gsap.to(introLogo,
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+        duration: 1.5,
+      }
+    );
+
+    const introImg = document.querySelector('.intro__img')
+    introImg && gsap.fromTo(introImg, { scale: 1 }, {
+      scale: 0.8,
       scrollTrigger: {
-        trigger: item,
-        start: 'center',
+        trigger: '.intro',
+        start: 'top',
         end: 'bottom',
         scrub: true,
       }
     })
-  })
-
-  const introImg = document.querySelector('.intro__img')
-  introImg && gsap.fromTo(introImg, { scale: 1 }, {
-    scale: 0.8,
-    scrollTrigger: {
-      trigger: '.intro',
-      start: 'top',
-      end: 'bottom',
-      scrub: true,
-    }
-  })
-
-  const pricingImg = document.querySelector('.pricing__img')
-  pricingImg && gsap.fromTo(pricingImg, { scale: 1 }, {
-    scale: 0.8,
-    scrollTrigger: {
-      trigger: '.intro',
-      start: 'top',
-      end: 'bottom',
-      scrub: true,
-    }
-  })
-
-  const offersImg = document.querySelector('.offers__img')
-  offersImg && ScrollTrigger.create({
-    pin: offersImg,
-    trigger: '.offers',
-    start: 'top',
-    end: '30%',
-  })
 
 
-  const itemsL = gsap.utils.toArray('[data-animation="fade-left"]')
-  itemsL.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: -50 }, {
-      opacity: 1, x: 0,
+    const pricingImg = document.querySelector('.pricing__img')
+    pricingImg && gsap.fromTo(pricingImg, { scale: 1 }, {
+      scale: 0.8,
       scrollTrigger: {
-        trigger: item,
-        start: '-750',
-        end: '-150',
-        scrub: true
-      }
-    })
-  })
-
-  const itemsR = gsap.utils.toArray('[data-animation="fade-right"]')
-  itemsR.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: 50 }, {
-      opacity: 1, x: 0,
-      scrollTrigger: {
-        trigger: item,
-        start: '-750',
-        end: '-150',
+        trigger: '.intro',
+        start: 'top',
+        end: 'bottom',
         scrub: true,
       }
     })
-  })
 
-
-  const itemsZoomIn = gsap.utils.toArray('[data-animation="zoom-in"]')
-  itemsZoomIn.forEach(item => {
-    gsap.fromTo(item, { scale: 0.9 }, {
-      scale: 1,
-      scrollTrigger: {
-        trigger: item,
-        start: '-850',
-        end: '-300',
-        scrub: true,
-      }
+    const offersImg = document.querySelector('.offers__img')
+    offersImg && ScrollTrigger.create({
+      pin: offersImg,
+      trigger: '.offers',
+      start: 'top',
+      end: '30%',
     })
-  })
-}
+
+
+    const itemsL = gsap.utils.toArray('[data-animation="fade-left"]')
+    itemsL.forEach(item => {
+      gsap.fromTo(item, { opacity: 0, x: -50 }, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: '-750',
+          end: '-150',
+          scrub: true
+        }
+      })
+    })
+
+    const itemsR = gsap.utils.toArray('[data-animation="fade-right"]')
+    itemsR.forEach(item => {
+      gsap.fromTo(item, { opacity: 0, x: 50 }, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: '-750',
+          end: '-150',
+          scrub: true,
+        }
+      })
+    })
+
+
+    const itemsZoomIn = gsap.utils.toArray('[data-animation="zoom-in"]')
+    itemsZoomIn.forEach(item => {
+      gsap.fromTo(item, { scale: 0.9 }, {
+        scale: 1,
+        scrollTrigger: {
+          trigger: item,
+          start: '-850',
+          end: '-300',
+          scrub: true,
+        }
+      })
+    })
+  }
+})
 
 //** sticky header **/
 const header = document.querySelector(".header");
@@ -114,7 +128,6 @@ function toggleMenu() {
     }, 250)
   }
 }
-
 
 //** Toast **/
 window.addEventListener('DOMContentLoaded', () => {
