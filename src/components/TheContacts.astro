@@ -5,29 +5,35 @@ interface Props {
   main?: boolean;
 }
 
-const { main = false } = Astro.props;
+const { main = false, ...rest } = Astro.props;
 ---
 
-<Section name="contacts">
+<Section name="contacts" {...rest}>
   {
     main && (
       <div class="contacts__top">
-        <Img class="img" src="contacts-img.png" only />
+        <Img
+          class="img"
+          src="contacts-img.png"
+          only
+          data-fancybox="club"
+          data-src="/assets/img/contacts-img.png"
+        />
         <Img class="ball" src="ball.png" only />
       </div>
     )
   }
-  <H2>Контакты</H2>
+  <H2 data-animation="fade-left">Контакты</H2>
   <div class="contacts__list">
-    <div class="row">
+    <div class="row" data-animation="fade-left">
       <div class="text-primary">Наш адрес:</div>
       <p>г. Санкт-Петербург, пр. Славы , д. 52, к. 1 <br /> (3 парадная)</p>
     </div>
-    <div class="row">
+    <div class="row" data-animation="fade-left">
       <div class="text-primary">Телефон для бронирования:</div>
       <a href="tel:+79112703355">+7 (911) 270-33-55</a>
     </div>
-    <div class="row">
+    <div class="row" data-animation="fade-right">
       <Button>Оставить заявку</Button>
       <div class="row">
         <a class="icon" href="#"><Img src="icons/telegram.svg" only /></a>
@@ -43,6 +49,7 @@ const { main = false } = Astro.props;
       height="400"
       frameborder="1"
       allowfullscreen="true"
-      style="position:relative;"></iframe>
+      style="position:relative;"
+      data-animation="zoom-in"></iframe>
   </Fragment>
 </Section>

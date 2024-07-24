@@ -341,6 +341,7 @@
       min-height: 200px;
       height: auto;
       object-fit: cover;
+      cursor: zoom-in;
     }
 
     .ball {
@@ -436,6 +437,7 @@
     width: 100%;
     height: 450px;
     border: none;
+    filter: grayscale(1);
 
     @include media("lg") {
       height: 350px;
@@ -744,39 +746,20 @@
   }
 
   &__img {
-    position: sticky;
-    top: 250px;
-    height: 400px;
-    flex-grow: 1;
+    position: absolute;
+    top: -120px;
+    right: -120px;
     z-index: -1;
 
-    img {
-      position: relative;
-      top: -120px;
-      left: 60px;
-      width: 780px;
-      object-fit: contain;
-    }
-
     @include media("xl") {
-      height: 250px;
-    }
-    @include media("1180px") {
-      img {
-        top: 0;
-        left: 0;
-        width: 480px;
-      }
+      top: 0;
+      width: 480px;
     }
     @include media("lg") {
       position: absolute;
       top: -150px;
       right: -200px;
       width: 480px;
-
-      img {
-        width: 100%;
-      }
     }
     @include media("md") {
       width: 380px;

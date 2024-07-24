@@ -32,10 +32,14 @@ const timestamp = Date.now();
     <!-- Header -->
     <TheHeader />
     <slot name="header" />
-    <!-- Main -->
-    <slot />
-    <!-- Footer -->
-    <TheFooter />
+    <div class="wrapper">
+      <div class="content">
+        <!-- Main -->
+        <slot />
+        <!-- Footer -->
+        <TheFooter />
+      </div>
+    </div>
     <!-- Popup -->
     <ThePopup />
     <!-- Need consultation -->
@@ -53,10 +57,11 @@ const timestamp = Date.now();
       <Button variant="black">Оставить заявку</Button>
     </div>
     <slot name="footer" />
+
     <!-- Scripts -->
-    <!-- <script src="/assets/js/gsap.min.js" is:inline></script>
     <script src="/assets/js/ScrollSmoother.min.js" is:inline></script>
-    <script src="/assets/js/ScrollTrigger.min.js" is:inline></script> -->
+    <script src="/assets/js/ScrollTrigger.min.js" is:inline></script>
+    <script src="/assets/js/gsap.min.js" is:inline></script>
     <script src="/assets/js/swiper.min.js" is:inline></script>
     <script src="/assets/js/fancybox.min.js" is:inline></script>
     <script src=`/assets/js/app.js?v=${timestamp}` is:inline></script>

@@ -9,31 +9,35 @@ const { main = false } = Astro.props;
 ---
 
 <Section name="gallery">
-  <H2>Фото нашего клуба</H2>
+  <H2 data-animation="fade-left">Фото нашего клуба</H2>
   <div class="gallery__list">
     <Img
       src="gallery/1.png"
       only
       data-fancybox="gallery"
       data-src="/assets/img/gallery/1.png"
+      data-animation="fade-left"
     />
     <Img
       src="gallery/2.png"
       only
       data-fancybox="gallery"
       data-src="/assets/img/gallery/2.png"
+      data-animation="fade-right"
     />
     <Img
       src="gallery/3.png"
       only
       data-fancybox="gallery"
       data-src="/assets/img/gallery/3.png"
+      data-animation="fade-left"
     />
     <Img
       src="gallery/4.png"
       only
       data-fancybox="gallery"
       data-src="/assets/img/gallery/4.png"
+      data-animation="fade-right"
     />
     {
       main && (
@@ -42,6 +46,7 @@ const { main = false } = Astro.props;
           only
           data-fancybox="gallery"
           data-src="/assets/img/gallery/5.png"
+          data-animation="fade-left"
         />
       )
     }
