@@ -701,6 +701,7 @@
   }
   @include media("lg") {
     padding: 80px 0 100px;
+    overflow: hidden;
   }
   @include media("sm") {
     padding: 60px 0;
@@ -708,6 +709,8 @@
 
   .container {
     position: relative;
+    display: flex;
+    align-items: flex-start;
   }
 
   &__text {
@@ -741,24 +744,44 @@
   }
 
   &__img {
-    position: absolute;
-    top: -120px;
-    right: -120px;
-    width: 780px;
+    position: sticky;
+    top: 250px;
+    height: 400px;
+    flex-grow: 1;
     z-index: -1;
 
+    img {
+      position: relative;
+      top: -120px;
+      left: 60px;
+      width: 780px;
+      object-fit: contain;
+    }
+
     @include media("xl") {
-      width: 580px;
+      height: 250px;
+    }
+    @include media("1180px") {
+      img {
+        top: 0;
+        left: 0;
+        width: 480px;
+      }
     }
     @include media("lg") {
+      position: absolute;
       top: -150px;
       right: -200px;
       width: 480px;
+
+      img {
+        width: 100%;
+      }
     }
     @include media("md") {
       width: 380px;
     }
-    @include media("sm") {
+    @include media("xs") {
       right: -150px;
       width: 280px;
     }
