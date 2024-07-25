@@ -143,6 +143,15 @@
     @include media("sm") {
       margin-left: 15px;
     }
+
+    &.active {
+      span {
+        display: none;
+      }
+      img {
+        display: block;
+      }
+    }
   }
 
   &-content {
@@ -171,21 +180,6 @@
     }
     @include media("xxs") {
       gap: 10px;
-    }
-  }
-
-  &.active {
-    .mobile__nav-menu {
-      img {
-        display: block;
-      }
-      span {
-        display: none;
-      }
-    }
-
-    .menu {
-      display: flex;
     }
   }
 }

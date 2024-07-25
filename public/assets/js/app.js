@@ -115,7 +115,8 @@ window.addEventListener("scroll", function () {
 });
 
 const menu = document.querySelector(".mobile__nav .menu");
-function toggleMenu() {
+function toggleMenu(btn) {
+  btn.classList.toggle('active')
   if (!menu.classList.contains('active')) {
     menu.style.display = 'flex'
     setTimeout(() => {
